@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* primary colors */
+  --primary-color: hsl(215, 51%, 70%);
+  --secondary-color: hsl(178, 100%, 50%);
+
+  /* neutral colors */
+  --neutral-001: hsl(217, 54%, 11%);
+  --neutral-002: hsl(216, 50%, 16%);
+  --neutral-003: hsl(215, 32%, 27%);
+  --neutral-004: hsl(0, 0%, 100%);
+
+  /* font family */
+  --primary-font: 'Outfit', serif;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--primary-font);
+  background-color: var(--neutral-001);
+}
+
+main {
+  width: 300px;
+  padding: 20px;
+  height: 500px;
+  display: flex;
+  border-radius: 15px;
+  flex-direction: column;
+  color: var(--neutral-004);
+  justify-content: space-between;
+  background-color: var(--neutral-002);
+  box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+div.img {
+  height: 56.5%;
+  position: relative;
+  border-radius: 5px;
+}
+
+div.img:hover {
+  cursor: pointer;
+  background-color: var(--secondary-color);
+}
+
+img#view {
+  top: 50%;
+  right: 50%;
+  opacity: 0;
+  position: absolute;
+  pointer-events: none;
+  transform: translate(50%, -50%);
+}
+
+img#equilibrium {
+  width: 100%;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center center;
+}
+
+img#equilibrium:hover {
+  opacity: 0.5;
+}
+
+img#equilibrium:hover + img#view {
+  opacity: 1;
+}
+
+h1 {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+h1:hover {
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
+p.description {
+  color: var(--primary-color);
+}
+
+div#information {
+  display: flex;
+  justify-content: space-between;
+}
+
+div#information p {
+  gap: 5px;
+  display: flex;
+  font-size: 0.85em;
+  align-items: center;
+}
+
+p.ethereum {
+  color: var(--secondary-color);
+}
+
+p.clock {
+  color: var(--primary-color);
+}
+
+hr {
+  border: 0.1px solid;
+  color: var(--neutral-003);
+}
+
+div#avatar {
+  gap: 15px;
+  display: flex;
+  align-items: center;
+}
+
+div#avatar img {
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+div#avatar p {
+  font-size: 0.85em;
+}
+
+div#avatar span {
+  color: var(--primary-color);
+}
+
+div#avatar a {
+  color: var(--neutral-004);
+  text-decoration: none;
+}
+
+div#avatar a:hover {
+  color: var(--secondary-color);
+}
